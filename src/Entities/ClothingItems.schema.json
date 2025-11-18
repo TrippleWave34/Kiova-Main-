@@ -1,0 +1,112 @@
+{
+  "name": "ClothingItem",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the clothing item"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "tops",
+        "bottoms",
+        "dresses",
+        "outerwear",
+        "shoes",
+        "accessories",
+        "bags",
+        "jewelry"
+      ],
+      "description": "Main category of the item"
+    },
+    "subcategory": {
+      "type": "string",
+      "description": "Specific type (e.g., t-shirt, jeans, sneakers)"
+    },
+    "color": {
+      "type": "string",
+      "description": "Primary color of the item"
+    },
+    "brand": {
+      "type": "string",
+      "description": "Brand name"
+    },
+    "size": {
+      "type": "string",
+      "description": "Size of the item"
+    },
+    "price": {
+      "type": "number",
+      "description": "Price if item is for sale"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "URL of the item image"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Auto-generated tags for AI matching"
+    },
+    "style_tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Style categories (streetwear, minimalist, vintage, etc.)"
+    },
+    "season": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "spring",
+          "summer",
+          "fall",
+          "winter",
+          "all-season"
+        ]
+      },
+      "description": "Suitable seasons"
+    },
+    "occasion": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Suitable occasions (casual, formal, party, etc.)"
+    },
+    "is_for_sale": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether this item is listed in the marketplace"
+    },
+    "condition": {
+      "type": "string",
+      "enum": [
+        "new",
+        "like-new",
+        "good",
+        "fair"
+      ],
+      "description": "Condition of the item"
+    },
+    "owner_id": {
+      "type": "string",
+      "description": "ID of the user who owns this item"
+    },
+    "sold": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether the item has been sold"
+    }
+  },
+  "required": [
+    "name",
+    "category",
+    "image_url"
+  ]
+}

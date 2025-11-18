@@ -1,0 +1,43 @@
+{
+  "name": "Outfit",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the outfit"
+    },
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Array of ClothingItem IDs in this outfit"
+    },
+    "occasion": {
+      "type": "string",
+      "description": "Occasion for this outfit"
+    },
+    "season": {
+      "type": "string",
+      "description": "Best season for this outfit"
+    },
+    "notes": {
+      "type": "string",
+      "description": "Personal notes about the outfit"
+    },
+    "is_public": {
+      "type": "boolean",
+      "default": false,
+      "description": "Whether to share this outfit publicly"
+    },
+    "likes": {
+      "type": "number",
+      "default": 0,
+      "description": "Number of likes from other users"
+    }
+  },
+  "required": [
+    "name",
+    "items"
+  ]
+}
